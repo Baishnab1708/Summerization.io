@@ -1,0 +1,33 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Flask / Backend
+instance/
+*.sqlite
+.env
+*.safetensors  # If your model files should not be pushed
+
+# Node.js / Frontend (Vercel will install dependencies)
+node_modules/
+npm-debug.log
+yarn-error.log
+*.lock
+dist/
+build/
+
+# Docker
+*.dockerignore
+
+# VSCode / IDE settings
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db

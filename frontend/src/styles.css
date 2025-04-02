@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#starIcon {
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.5));
+  fill: url(#starGradient);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.pulse-animation {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.count-increment {
+  animation: pulse 0.5s ease-in-out;
+}
+
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #2a2a2a 8%, #3a3a3a 18%, #2a2a2a 33%);
+  background-size: 800px 104px;
+  position: relative;
+}
+
+/* CSS */
+.button-34 {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+
+
+
+#fileArea.dragging {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+  
+  /* Hide elements */
+  .hidden {
+    display: none;
+  }
+
+  /* Ensure both File and Text buttons start as grey */
+#fileBtn,
+#textBtn {
+  background-color: #4b5563; 
+  color: #e5e7eb;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* When a button has the "active" class, change it to blue */
+#fileBtn.active,
+#textBtn.active {
+  background-color: #2563eb; 
+  color: #ffffff; 
+}
+
+#contact-info {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 0.6rem; /* very small font size */
+  opacity: 0; /* initially hidden */
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#contact-info a {
+  color: inherit; /* Inherit the white color from the container */
+  text-decoration: none; /* Remove underline if desired */
+}
